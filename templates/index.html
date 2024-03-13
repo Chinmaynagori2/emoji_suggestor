@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emoji Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id='heading' class="shadow">Emoji Suggestor</h1>
+    <form method="post" action="/predict">
+        <label for="text">Write yout message here :</label><br>
+        <textarea name="text" class="shadow" id="text" placeholder="Write your message here..."></textarea><br>
+        <input type="submit" id="btn" value="Suggest">
+    </form>
+    {% if emoji_pred %}
+    <p class="result">{{ emoji_pred }}</p>
+    {% endif %}
+</body>
+</html>
